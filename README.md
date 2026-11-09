@@ -26,14 +26,14 @@ project.
 After a new clone of the main project:
 
 ```bash
-git clone --recurse-submodules https://github.com/Davidlequnchen/emotion_recognition.git
+git clone --depth 1 --recurse-submodules --shallow-submodules https://github.com/Davidlequnchen/emotion_recognition.git
 cd emotion_recognition
 python3 emotion_recognition/scripts/common/setup_models.py
 ```
 
 A normal `git clone` does not initialize submodules; the setup script initializes this model submodule when
 needed. Git does not download Release attachments automatically: the final Python command downloads them.
-Existing machines should `git pull` and run the same setup command. A leftover local `models/` directory is
+The optional shallow-clone flags avoid retrieving the old SER-weight history in the main repository. Existing machines should `git pull` and run the same setup command. A leftover local `models/` directory is
 preserved as a backup and verified weights are reused, so they are not downloaded again.
 
 ## Included models
