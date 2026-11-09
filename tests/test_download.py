@@ -8,10 +8,16 @@ import io
 import json
 from pathlib import Path
 import tempfile
+import ssl
+import sys
 import threading
 import unittest
 from unittest import mock
 import urllib.request
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 SPEC = importlib.util.spec_from_file_location("downloader", Path(__file__).resolve().parents[1] / "download.py")
 downloader = importlib.util.module_from_spec(SPEC)
@@ -281,6 +287,19 @@ class DownloadTests(unittest.TestCase):
         with self.assertRaises(ValueError) as caught:
             downloader.Downloader(self.manifest, self.root, token=token)
         self.assertNotIn("secret", str(caught.exception))
+
+    def test_certificate_failure_fails_fast_preserving_verified_weight(self):
+        self.target.parent.mkdir(parents=True)
+        self.target.write_bytes(b'old local weight remains untouched')
+        client = downloader.Downloader(self.manifest, self.root)
+        error = urllib.error.URLError(ssl.SSLCertVerificationError(1, 'self-signed certificate in certificate chain'))
+        with mock.patch.object(client.opener, 'open', side_effect=error) as request:
+            with mock.patch.object(downloader.time, 'sleep') as sleep:
+                with self.assertRaisesRegex(downloader.DownloadError, 'HTTPS certificate verification failed'):
+                    client.download_part(self.file['parts'][0])
+        self.assertEqual(request.call_count, 1)
+        sleep.assert_not_called()
+        self.assertEqual(self.target.read_bytes(), b'old local weight remains untouched')
 
     def test_cli_list_and_verify_exit_status(self):
         path = self.root / "manifest.json"

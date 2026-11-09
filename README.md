@@ -36,6 +36,33 @@ needed. Git does not download Release attachments automatically: the final Pytho
 The optional shallow-clone flags avoid retrieving the old SER-weight history in the main repository. Existing machines should `git pull` and run the same setup command. A leftover local `models/` directory is
 preserved as a backup and verified weights are reused, so they are not downloaded again.
 
+## Company certificates
+
+Normal personal computers need no extra configuration. The downloader uses Python's verified HTTPS defaults.
+If `truststore` is already installed, it automatically uses the operating system's certificate store, including
+company-managed roots in macOS Keychain or Windows. Certificate and hostname checks remain enabled.
+
+If a company Conda environment reports `CERTIFICATE_VERIFY_FAILED` or `self-signed certificate in certificate
+chain`, install native trust-store support once in that same environment (Python 3.10+), then rerun setup:
+
+```bash
+python -m pip install truststore
+python emotion_recognition/scripts/common/setup_models.py
+```
+
+The setup command above runs from the main repository root. When using this repository alone, rerun
+`python download.py` instead. Verified weights and interrupted parts are reused; existing files need not be removed.
+`requirements-download.txt` is an optional convenience file for installing native trust support.
+
+If the company CA is not installed in the OS store, or Python is older than 3.10, obtain its CA PEM bundle from IT:
+
+```bash
+python emotion_recognition/scripts/common/setup_models.py --ca-bundle "/path/to/company-ca.pem"
+```
+
+`SSL_CERT_FILE=/path/to/company-ca.pem` is also supported. If pip itself needs the company certificate, use
+`python -m pip install --cert /path/to/company-ca.pem truststore`. No global SSL patch or verification bypass is used.
+
 ## Included models
 
 | Folder | Weight size (GB) | Publisher / source | Terms |

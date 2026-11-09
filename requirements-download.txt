@@ -1,0 +1,3 @@
+# Optional: native OS certificate trust for company-managed Python environments.
+# The downloader also runs without extra packages using Python's standard TLS roots.
+truststore>=0.10; python_version >= '3.10'

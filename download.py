@@ -20,6 +20,8 @@ import urllib.error
 import urllib.parse
 import urllib.request
 
+from tls import create_ssl_context, certificate_error, certificate_error_message
+
 
 class DownloadError(Exception):
     """A model asset could not be safely restored."""
@@ -127,7 +129,7 @@ class StripAuthorizationRedirect(urllib.request.HTTPRedirectHandler):
 
 class Downloader:
     def __init__(self, manifest, root, cache_dir=None, workers=2, keep_cache=False,
-                 token=None, timeout=60):
+                 token=None, timeout=60, ca_bundle=None):
         self.manifest = validate_manifest(manifest)
         self.root = Path(root).resolve()
         cache_root = Path(cache_dir).expanduser().resolve() if cache_dir else self.root / ".downloads"
@@ -139,7 +141,9 @@ class Downloader:
             raise ValueError("GitHub token must contain printable ASCII without whitespace")
         self.token = token
         self.timeout = timeout
-        self.opener = urllib.request.build_opener(StripAuthorizationRedirect())
+        self.opener = urllib.request.build_opener(
+            urllib.request.HTTPSHandler(context=create_ssl_context(ca_bundle)),
+            StripAuthorizationRedirect())
         self._api_assets = None
         self._api_lock = threading.Lock()
         # Validate every target before making any network request or writing files.
@@ -247,6 +251,8 @@ class Downloader:
                 elif exc.code not in (408, 429) and exc.code < 500:
                     break
             except (OSError, urllib.error.URLError, http.client.HTTPException, DownloadError) as exc:
+                if certificate_error(exc):
+                    raise DownloadError(certificate_error_message(exc)) from exc
                 last_error = str(exc)
                 if partial.exists() and partial.stat().st_size > part["size"]:
                     partial.unlink()
@@ -307,6 +313,7 @@ def main(argv=None):
     parser.add_argument("--verify-only", action="store_true", help="verify local weights without network access")
     parser.add_argument("--workers", type=int, default=2, help="parallel asset downloads per weight file (default: 2)")
     parser.add_argument("--cache-dir", type=Path, help="release part cache; default: .downloads beside this script")
+    parser.add_argument("--ca-bundle", type=Path, help="company/custom CA PEM bundle; otherwise SSL_CERT_FILE or system/default roots")
     parser.add_argument("--keep-cache", action="store_true", help="keep verified release parts after restoring weights")
     parser.add_argument("--token-env", default="GITHUB_TOKEN", help="optional GitHub API token environment variable")
     parser.add_argument("--manifest", type=Path, default=Path(__file__).with_name("manifest.json"))
@@ -329,7 +336,7 @@ def main(argv=None):
                 print("{}\t{:.3f} GB\t{}".format(key, size / 1e9, model.get("name", key)))
             return 0
         downloader = Downloader(manifest, args.root, args.cache_dir, args.workers,
-                                args.keep_cache, os.environ.get(args.token_env))
+                                args.keep_cache, os.environ.get(args.token_env), ca_bundle=args.ca_bundle)
         return 0 if downloader.run(keys, args.verify_only) else 1
     except (OSError, ValueError, DownloadError) as exc:
         print("ERROR: " + str(exc), file=sys.stderr)
