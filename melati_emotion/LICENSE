@@ -1,0 +1,30 @@
+Melati emotion classifier: licence
+
+The weights in this repository may be used, reproduced, modified and redistributed for NON-COMMERCIAL RESEARCH
+PURPOSES ONLY (research, teaching and publication; not commercial products, services or licensing). Any redistribution
+of the weights or of works derived from them must carry this licence.
+
+Why: the training data includes EmoV-DB, licensed for non-commercial purposes (reproduced below), and Expresso
+(CC BY-NC 4.0). Every corpus used carries an explicit licence that allows derivative works under these terms:
+- EMNS, English, acted (Apache-2.0): https://openslr.org/136/
+- Emozionalmente, Italian, crowd-acted (CC BY 4.0): https://zenodo.org/records/6569824
+- JL-Corpus, New Zealand English, acted (CC0): https://www.kaggle.com/datasets/tli725/jl-corpus
+- MESD, Mexican Spanish, acted (CC BY 4.0): https://data.mendeley.com/datasets/cy34mh68j9/5
+- Oreau, French, acted (CC BY 4.0): https://zenodo.org/records/4405783
+- RESD, Russian, acted dialogues (MIT): https://huggingface.co/datasets/Aniemore/resd_annotated
+- SUBESCO, Bangla, acted (CC BY 4.0): https://zenodo.org/records/4526477
+- EmoV-DB, English, acted (EmoV-DB non-commercial licence): https://github.com/numediart/EmoV-DB/blob/master/LICENSE.md
+- Expresso, English, read and improvised (CC BY-NC 4.0): https://github.com/facebookresearch/textlesslib/tree/main/examples/expresso/dataset
+
+Excluded on licence grounds: CREMA-D (ODbL), RAVDESS, CaFE and PAVOQUE (CC BY-NC-SA 4.0), MELD (GPL-3.0, clipped from a TV series), NonverbalTTS's labels (CC BY-NC-SA 4.0), TurEV-DB (CC BY-NC-ND 4.0), and eNTERFACE, EmoDB, ASED, ShEMO and URDU (no licence text).
+
+The encoder is openai/whisper-large-v3 (MIT). The software in this repository is part of Melati
+(https://github.com/Scicom-AI-Enterprise-Organization/Melati).
+
+---------------------------------------------------------------------------------------------------------------
+EmoV-DB licence (https://github.com/numediart/EmoV-DB/blob/master/LICENSE.md):
+
+By downloading or using the EmoV-DB Dataset, you are agreeing to the “Non-commercial Purposes” condition. “Non-commercial Purposes” means research, teaching, scientific publication and personal experimentation. Non-commercial Purposes include use of the Dataset to perform benchmarking for purposes of academic or applied research publication. Non-commercial Purposes does not include purposes primarily intended for or directed towards commercial advantage or monetary compensation, or purposes intended for or directed towards litigation, licensing, or enforcement, even in part. EmoV-DB dataset is provided as-is, is experimental in nature, and not intended for use by, with, or for the diagnosis of human subjects for incorporation into a product.
+
+If you wish to make use of the EmoV-DB Dataset for Commercial Purpose, please contact Prof. Sarah Ostadabbas
+https://coe.northeastern.edu/people/ostadabbas-sarah/

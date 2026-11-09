@@ -1,0 +1,64 @@
+{
+  "verified_date": "2026-11-09",
+  "emotion2vec_plus_large": {
+    "declared_license": "FunASR Model Open Source License Agreement",
+    "declaration_source": "local original README.md license_link: https://github.com/alibaba-damo-academy/FunASR",
+    "license_source": "https://github.com/modelscope/FunASR/blob/main/MODEL_LICENSE",
+    "license_version": "1.1 (currently published by the official FunASR project)",
+    "notes": "Keep the original model card, model name, source and author information. This is the model licence, distinct from the FunASR source-code licence.",
+    "saved_file": "emotion2vec_plus_large/LICENSE",
+    "saved_bytes": 5306,
+    "saved_sha256": "7dba975a2069691db4992b0592d70828b330d2f8a30a71450f4e152a554e84f8",
+    "download_resolved_url": "https://raw.githubusercontent.com/modelscope/FunASR/main/MODEL_LICENSE"
+  },
+  "qwen2_audio_7b": {
+    "declared_license": "Apache-2.0",
+    "declaration_source": "https://huggingface.co/Qwen/Qwen2-Audio-7B-Instruct/tree/main",
+    "original_readme": "Original local README.md YAML frontmatter declares license: apache-2.0; upstream file tree contains no standalone LICENSE.",
+    "license_source": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+    "notes": "Added the standard Apache-2.0 full text. Preserve the original publisher model card and its attribution; this does not invent an upstream LICENSE file.",
+    "saved_file": "qwen2_audio_7b/LICENSE",
+    "saved_bytes": 11358,
+    "saved_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "download_resolved_url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+  },
+  "gemma4_e4b": {
+    "declared_license": "Apache-2.0",
+    "declaration_source": "https://ai.google.dev/gemma/docs/gemma_4_license",
+    "resolved_declaration_source": "https://ai.google.dev/gemma/apache_2",
+    "original_readme": "Original local README.md YAML frontmatter declares license: apache-2.0 and links the official Gemma 4 licence page.",
+    "license_source": "https://www.apache.org/licenses/LICENSE-2.0.txt",
+    "notes": "Official Gemma licence page resolves to Apache License 2.0. Added its standard full text; preserve original Google DeepMind model card and attribution.",
+    "saved_file": "gemma4_e4b/LICENSE",
+    "saved_bytes": 11358,
+    "saved_sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "download_resolved_url": "https://www.apache.org/licenses/LICENSE-2.0.txt"
+  },
+  "vox_profile_whisper": {
+    "declared_license": "openrail (model-card declaration)",
+    "declaration_source": "https://huggingface.co/tiantiaf/whisper-large-v3-msp-podcast-emotion",
+    "local_file": "vox_profile_whisper/README.md",
+    "notes": "The publisher model card declares Open RAIL and explicitly excludes commercial, clinical/diagnostic, surveillance and privacy-invasive use. Preserve the whole original model card. No standalone weight licence or specific OpenRAIL variant was provided; do not fabricate one. The vox-profile-release/LICENSE concerns upstream source code and must not be presented as the weight licence."
+  },
+  "vox_profile_wavlm": {
+    "declared_license": "openrail (model-card declaration)",
+    "declaration_source": "https://huggingface.co/tiantiaf/wavlm-large-categorical-emotion",
+    "local_file": "vox_profile_wavlm/README.md",
+    "notes": "The publisher model card declares Open RAIL and explicitly excludes commercial, clinical/diagnostic, surveillance and privacy-invasive use. Preserve the whole original model card. No standalone weight licence or specific OpenRAIL variant was provided; do not fabricate one. The vox-profile-release/LICENSE concerns upstream source code and must not be presented as the weight licence."
+  },
+  "melati_emotion": {
+    "declared_license": "Non-commercial research only",
+    "local_file": "melati_emotion/LICENSE",
+    "notes": "Keep the existing original LICENSE byte for byte; it explicitly requires the licence to accompany redistribution."
+  },
+  "meralion_ser_v1": {
+    "declared_license": "MERaLiON Public Licence SER V1",
+    "local_file": "meralion_ser_v1/MERaLiON-Public-Licence-SER-V1.pdf",
+    "notes": "Keep the original PDF and model card, author/copyright notices and project modifications note."
+  },
+  "qwen2_5_omni_7b": {
+    "declared_license": "Apache-2.0",
+    "local_file": "qwen2_5_omni_7b/LICENSE",
+    "notes": "Keep existing original LICENSE byte for byte, including Alibaba Cloud copyright notice."
+  }
+}

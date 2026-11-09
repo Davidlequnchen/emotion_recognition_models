@@ -1,0 +1,504 @@
+{
+  "schema_version": 1,
+  "repository": "Davidlequnchen/emotion_recognition_models",
+  "release_tag": "models-2026-11-09-v1",
+  "models": {
+    "emotion2vec_plus_large": {
+      "name": "emotion2vec+ large",
+      "source": "https://huggingface.co/emotion2vec/emotion2vec_plus_large",
+      "files": [
+        {
+          "path": "model.pt",
+          "size": 1945790254,
+          "sha256": "be501a01f26fcdc7663a062dff86af839afbaef7c4de32f5e42d7e1ad2784da4",
+          "parts": [
+            {
+              "asset": "emotion2vec_plus_large--model.pt.part000",
+              "size": 1610612736,
+              "sha256": "a365b87b46c75082ab1f52709ab3838adaec5de66156849d0eed08a60c189300"
+            },
+            {
+              "asset": "emotion2vec_plus_large--model.pt.part001",
+              "size": 335177518,
+              "sha256": "b1ff2e9b43fe2799349c293cb29f6cd07803d1e958733be18aa111f634bc0e05"
+            }
+          ]
+        }
+      ],
+      "metadata_files": [
+        "emotion2vec_plus_large/README.md",
+        "emotion2vec_plus_large/config.yaml",
+        "emotion2vec_plus_large/configuration.json",
+        "emotion2vec_plus_large/emotion2vec+radar.png",
+        "emotion2vec_plus_large/example/test.wav",
+        "emotion2vec_plus_large/logo.png",
+        "emotion2vec_plus_large/tokens.txt"
+      ],
+      "source_revision": "6c303ba987b86b93193de93e34bb2b077a6bedc4"
+    },
+    "meralion_ser_v1": {
+      "name": "MERaLiON-SER-v1",
+      "source": "https://huggingface.co/MERaLiON/MERaLiON-SER-v1",
+      "files": [
+        {
+          "path": "model.safetensors",
+          "size": 3080143412,
+          "sha256": "a143a3890362fb405d07df1d4b5a6d2b4d6680824c5643800c52e40953286fbd",
+          "parts": [
+            {
+              "asset": "meralion_ser_v1--model.safetensors.part000",
+              "size": 1610612736,
+              "sha256": "bb6d251944c306fe829a3873a7e6bd7909de2c7bb27a82a7dc493bb7621bb5d7"
+            },
+            {
+              "asset": "meralion_ser_v1--model.safetensors.part001",
+              "size": 1469530676,
+              "sha256": "876e263a534264b6c3aa053de47f5a4a5d34b86ab0c4b1269450ec6e1f3ea185"
+            }
+          ]
+        }
+      ],
+      "metadata_files": [
+        "meralion_ser_v1/EngEval_8models.png",
+        "meralion_ser_v1/MERaLiON-Public-Licence-SER-V1.pdf",
+        "meralion_ser_v1/README.md",
+        "meralion_ser_v1/SG_UAR_4plots.pdf",
+        "meralion_ser_v1/SG_UAR_4plots.png",
+        "meralion_ser_v1/SG_UAR_4plots_8models.png",
+        "meralion_ser_v1/added_tokens.json",
+        "meralion_ser_v1/config.json",
+        "meralion_ser_v1/configuration_ser_whisper_ecapa.py",
+        "meralion_ser_v1/exporter_lora_whisper.py",
+        "meralion_ser_v1/exporter_stub.py",
+        "meralion_ser_v1/merges.txt",
+        "meralion_ser_v1/modeling_ser_whisper_ecapa.py",
+        "meralion_ser_v1/normalizer.json",
+        "meralion_ser_v1/preprocessor_config.json",
+        "meralion_ser_v1/special_tokens_map.json",
+        "meralion_ser_v1/tokenizer_config.json",
+        "meralion_ser_v1/vocab.json",
+        "meralion_ser_v1/whisper-medium/config.json"
+      ],
+      "source_revision": "7e3ee6fa4534dea8316e8ca43e377e2fbb58496b"
+    },
+    "melati_emotion": {
+      "name": "Melati",
+      "source": "https://huggingface.co/Scicom-intl/Melati-Emotion-Whisper-Large-V3",
+      "files": [
+        {
+          "path": "model.safetensors",
+          "size": 1275321464,
+          "sha256": "e08aa13121e9247ec56751055695f5279f20bb32bc6fee0740d9c3b34d237bcc",
+          "parts": [
+            {
+              "asset": "melati_emotion--model.safetensors.part000",
+              "size": 1275321464,
+              "sha256": "e08aa13121e9247ec56751055695f5279f20bb32bc6fee0740d9c3b34d237bcc"
+            }
+          ]
+        }
+      ],
+      "metadata_files": [
+        "melati_emotion/LICENSE",
+        "melati_emotion/README.md",
+        "melati_emotion/config.json",
+        "melati_emotion/configuration_melati_head.py",
+        "melati_emotion/figures/held_out.png",
+        "melati_emotion/figures/leave_one_out.png",
+        "melati_emotion/figures/recall.png",
+        "melati_emotion/melati_emotion.py",
+        "melati_emotion/modeling_melati_head.py",
+        "melati_emotion/preprocessor_config.json"
+      ],
+      "source_revision": "145f4eb05d07dc4d06352132787a8b4f836e7710"
+    },
+    "vox_profile_whisper": {
+      "name": "Vox-Profile Whisper slim",
+      "source": "https://huggingface.co/tiantiaf/whisper-large-v3-msp-podcast-emotion",
+      "files": [
+        {
+          "path": "model_slim.safetensors",
+          "size": 1286408760,
+          "sha256": "80ca8f8e21034f1cdc43e7ff9dcb58d67ac3f95eab82855d93ce5bcf69fc3b45",
+          "parts": [
+            {
+              "asset": "vox_profile_whisper--model_slim.safetensors.part000",
+              "size": 1286408760,
+              "sha256": "80ca8f8e21034f1cdc43e7ff9dcb58d67ac3f95eab82855d93ce5bcf69fc3b45"
+            }
+          ]
+        }
+      ],
+      "metadata_files": [
+        "vox_profile_whisper/README.md",
+        "vox_profile_whisper/config.json",
+        "vox_profile_whisper/whisper-large-v3/config.json",
+        "vox_profile_whisper/whisper-large-v3/preprocessor_config.json"
+      ],
+      "source_revision": "b92dab65151206a603810ec8b72eb528b9dd983c"
+    },
+    "vox_profile_wavlm": {
+      "name": "Vox-Profile WavLM",
+      "source": "https://huggingface.co/tiantiaf/wavlm-large-categorical-emotion",
+      "files": [
+        {
+          "path": "model.safetensors",
+          "size": 1264800624,
+          "sha256": "3459156c93046296af2ea77f7c619c7ed626431210a9ab4ca37594e279f68414",
+          "parts": [
+            {
+              "asset": "vox_profile_wavlm--model.safetensors.part000",
+              "size": 1264800624,
+              "sha256": "3459156c93046296af2ea77f7c619c7ed626431210a9ab4ca37594e279f68414"
+            }
+          ]
+        }
+      ],
+      "metadata_files": [
+        "vox_profile_wavlm/README.md",
+        "vox_profile_wavlm/config.json",
+        "vox_profile_wavlm/wavlm-large/config.json",
+        "vox_profile_wavlm/wavlm-large/preprocessor_config.json"
+      ],
+      "source_revision": "621a2ceaaa2408e390e0fc9454e8c29490f689e2"
+    },
+    "qwen2_5_omni_7b": {
+      "name": "Qwen2.5-Omni 7B",
+      "source": "https://huggingface.co/Qwen/Qwen2.5-Omni-7B",
+      "files": [
+        {
+          "path": "model-00001-of-00005.safetensors",
+          "size": 4985055504,
+          "sha256": "5edb02fd7c98803239468375cc9dc1bff492865c2aa086b78f348597021d6cbc",
+          "parts": [
+            {
+              "asset": "qwen2_5_omni_7b--model-00001-of-00005.safetensors.part000",
+              "size": 1610612736,
+              "sha256": "08b0db97c2938fd951f491c1080e996fd4bc061da75112dfbdadccde2162c3ee"
+            },
+            {
+              "asset": "qwen2_5_omni_7b--model-00001-of-00005.safetensors.part001",
+              "size": 1610612736,
+              "sha256": "58b16670d456b67ff636d98eef2c93f6a2159edd100e21e8cbe96e62d715a1e7"
+            },
+            {
+              "asset": "qwen2_5_omni_7b--model-00001-of-00005.safetensors.part002",
+              "size": 1610612736,
+              "sha256": "b553af3a24709019793d76b4fa51e7a483121674acd5d5100b75f40175f87418"
+            },
+            {
+              "asset": "qwen2_5_omni_7b--model-00001-of-00005.safetensors.part003",
+              "size": 153217296,
+              "sha256": "56521292cfb08aaddfdb6da3eafe301b87c383ffd6e5b6c9cbb20662a66c75b0"
+            }
+          ]
+        },
+        {
+          "path": "model-00002-of-00005.safetensors",
+          "size": 4991496800,
+          "sha256": "7c99b55c6e5bc63fd4b19d4dc23cdc3ddac4b0101bb3c0958cc2b5d05c2bbafe",
+          "parts": [
+            {
+              "asset": "qwen2_5_omni_7b--model-00002-of-00005.safetensors.part000",
+              "size": 1610612736,
+              "sha256": "58fd7a72d621a940745b238bad302609a0cad9efc3392b7840d6446ef90e1512"
+            },
+            {
+              "asset": "qwen2_5_omni_7b--model-00002-of-00005.safetensors.part001",
+              "size": 1610612736,
+              "sha256": "f03cbdbd7554304f62c7652f657a156c08ec215fbc70f1c31ded6d771b67c975"
+            },
+            {
+              "asset": "qwen2_5_omni_7b--model-00002-of-00005.safetensors.part002",
+              "size": 1610612736,
+              "sha256": "a869aa06891890eb69cc4f30a877bee2c56fa32ad7f7b771bfc5282317cb16b5"
+            },
+            {
+              "asset": "qwen2_5_omni_7b--model-00002-of-00005.safetensors.part003",
+              "size": 159658592,
+              "sha256": "341ba865c4bb429f796964368cc4c2f3ea3983c7bda637876166796a550d3efa"
+            }
+          ]
+        },
+        {
+          "path": "model-00003-of-00005.safetensors",
+          "size": 4991496904,
+          "sha256": "ad00c3ac296300db905934ed213c4077ff49b85d30c0099270c814e2c77ec812",
+          "parts": [
+            {
+              "asset": "qwen2_5_omni_7b--model-00003-of-00005.safetensors.part000",
+              "size": 1610612736,
+              "sha256": "f758f2ca7f823cdce7d692c19669e0793a339a352be63f3b55fb8c7a5b9e81b7"
+            },
+            {
+              "asset": "qwen2_5_omni_7b--model-00003-of-00005.safetensors.part001",
+              "size": 1610612736,
+              "sha256": "927e0a91f36d4d8961b24b066b69df8683a80a496035c9ac5269c27c2a748224"
+            },
+            {
+              "asset": "qwen2_5_omni_7b--model-00003-of-00005.safetensors.part002",
+              "size": 1610612736,
+              "sha256": "bb93ada4f4595c8d7c30accfbb974d05527f279603d69cb98fc037e9727c49c4"
+            },
+            {
+              "asset": "qwen2_5_omni_7b--model-00003-of-00005.safetensors.part003",
+              "size": 159658696,
+              "sha256": "6c63c6eccb69796bea955f5def4277ccdd8b9d4cb59b0a7910f3b15ec50cc771"
+            }
+          ]
+        },
+        {
+          "path": "model-00004-of-00005.safetensors",
+          "size": 4969489824,
+          "sha256": "152bc7d81441eaba22547d8d96c03d32dd592ce0e0e1d0e449347a4b23a532d3",
+          "parts": [
+            {
+              "asset": "qwen2_5_omni_7b--model-00004-of-00005.safetensors.part000",
+              "size": 1610612736,
+              "sha256": "0f12c2b463164ea41fab54c7c01761b435ffb6465868ab37db8a00a484b8bef5"
+            },
+            {
+              "asset": "qwen2_5_omni_7b--model-00004-of-00005.safetensors.part001",
+              "size": 1610612736,
+              "sha256": "fbc8d5f71166796b9e7214d830a0e662d21ac398e419b81a9e7390b64be5835a"
+            },
+            {
+              "asset": "qwen2_5_omni_7b--model-00004-of-00005.safetensors.part002",
+              "size": 1610612736,
+              "sha256": "b4ecf20bfaaf9e6bdc3e8df40a7686aeb3134c209204d8f7befcc083571b8036"
+            },
+            {
+              "asset": "qwen2_5_omni_7b--model-00004-of-00005.safetensors.part003",
+              "size": 137651616,
+              "sha256": "d85d9bc30c9502b96bd49c1b693179d0f2489b8cf59cd88af63dfa94cc51b35b"
+            }
+          ]
+        },
+        {
+          "path": "model-00005-of-00005.safetensors",
+          "size": 2425322160,
+          "sha256": "b8b18276481ba8cdf4fe2c98ac4c7a2da6e0d1c8a51850d162a391760cb2b81e",
+          "parts": [
+            {
+              "asset": "qwen2_5_omni_7b--model-00005-of-00005.safetensors.part000",
+              "size": 1610612736,
+              "sha256": "24d7f8ab0c3ccc749c8fe3c0d5176573fa9f0cbb4321045c08575d06abd2a902"
+            },
+            {
+              "asset": "qwen2_5_omni_7b--model-00005-of-00005.safetensors.part001",
+              "size": 814709424,
+              "sha256": "9f966630f8471322459276feab5e4cb964f1f68743f2ac5dbd7aa91b5555afe4"
+            }
+          ]
+        }
+      ],
+      "metadata_files": [
+        "qwen2_5_omni_7b/LICENSE",
+        "qwen2_5_omni_7b/README.md",
+        "qwen2_5_omni_7b/added_tokens.json",
+        "qwen2_5_omni_7b/chat_template.json",
+        "qwen2_5_omni_7b/config.json",
+        "qwen2_5_omni_7b/generation_config.json",
+        "qwen2_5_omni_7b/merges.txt",
+        "qwen2_5_omni_7b/model.safetensors.index.json",
+        "qwen2_5_omni_7b/preprocessor_config.json",
+        "qwen2_5_omni_7b/special_tokens_map.json",
+        "qwen2_5_omni_7b/tokenizer.json",
+        "qwen2_5_omni_7b/tokenizer_config.json",
+        "qwen2_5_omni_7b/vocab.json"
+      ],
+      "source_revision": "ae9e1690543ffd5c0221dc27f79834d0294cba00"
+    },
+    "qwen2_audio_7b": {
+      "name": "Qwen2-Audio 7B Instruct",
+      "source": "https://huggingface.co/Qwen/Qwen2-Audio-7B-Instruct",
+      "files": [
+        {
+          "path": "model-00001-of-00005.safetensors",
+          "size": 3911340848,
+          "sha256": "383de5b5b06f7e7f276850a065d9164641c93009f79a377352a7c949d17c1d7a",
+          "parts": [
+            {
+              "asset": "qwen2_audio_7b--model-00001-of-00005.safetensors.part000",
+              "size": 1610612736,
+              "sha256": "55dabcd55cf2c4a1d2c5b0b9f7d3e82a2db5938ba1aac7acf01c1546dd64b2f1"
+            },
+            {
+              "asset": "qwen2_audio_7b--model-00001-of-00005.safetensors.part001",
+              "size": 1610612736,
+              "sha256": "26c33e43a52257af952333ec8c8f2052bdfb4555ec4f08a2b014309579ec8bf9"
+            },
+            {
+              "asset": "qwen2_audio_7b--model-00001-of-00005.safetensors.part002",
+              "size": 690115376,
+              "sha256": "91a3d479cc2be38a980bb4a9aa296d984e55ba827a7a5acb094eae40f7c8c8da"
+            }
+          ]
+        },
+        {
+          "path": "model-00002-of-00005.safetensors",
+          "size": 3980786080,
+          "sha256": "610e59a23cdf1f78d7e3b42e69f2e1a08578f29726391a1772aecac95db3c59c",
+          "parts": [
+            {
+              "asset": "qwen2_audio_7b--model-00002-of-00005.safetensors.part000",
+              "size": 1610612736,
+              "sha256": "99326eaeb38f3ebfc8e6c0a4f13239c1dddde93a94be417c840479f78570864a"
+            },
+            {
+              "asset": "qwen2_audio_7b--model-00002-of-00005.safetensors.part001",
+              "size": 1610612736,
+              "sha256": "4a88cd01ba36fb0f487040b373d26b12c9813e0aa46e104230a600ba78c882dd"
+            },
+            {
+              "asset": "qwen2_audio_7b--model-00002-of-00005.safetensors.part002",
+              "size": 759560608,
+              "sha256": "1147bd745691abc4a0c9e031d75278c3122298bacdd99f26e2c88aa1bdbe15f0"
+            }
+          ]
+        },
+        {
+          "path": "model-00003-of-00005.safetensors",
+          "size": 3980819456,
+          "sha256": "b9ea76e97226524a12b6acc5e896bebf01a01018fbcad20a72eb13c7950f6916",
+          "parts": [
+            {
+              "asset": "qwen2_audio_7b--model-00003-of-00005.safetensors.part000",
+              "size": 1610612736,
+              "sha256": "8c7c89b5efe2c802b9165ce5d6d1deb5206bf07c244bb7784f8f6be38a8c1608"
+            },
+            {
+              "asset": "qwen2_audio_7b--model-00003-of-00005.safetensors.part001",
+              "size": 1610612736,
+              "sha256": "f8c2b4f8666fb46de353fe4723f8445661dc9c6d30ae0c3993a4c9471aec900b"
+            },
+            {
+              "asset": "qwen2_audio_7b--model-00003-of-00005.safetensors.part002",
+              "size": 759593984,
+              "sha256": "0182fa54fef3899e721cb88ead6422e03bfc97bf44f8e29a4576c73692e8745b"
+            }
+          ]
+        },
+        {
+          "path": "model-00004-of-00005.safetensors",
+          "size": 3643135696,
+          "sha256": "d68dee591619e26e3d0af23a07e181c70134fbc3aa33e24d872224607aae2c62",
+          "parts": [
+            {
+              "asset": "qwen2_audio_7b--model-00004-of-00005.safetensors.part000",
+              "size": 1610612736,
+              "sha256": "dfe3194dbe6ceab6d1e9429c0cabd02751445379cc3038c419e69ebf3d0954cc"
+            },
+            {
+              "asset": "qwen2_audio_7b--model-00004-of-00005.safetensors.part001",
+              "size": 1610612736,
+              "sha256": "9fc64243f7f0217f85bed1ad953210b8f9a28841cf885fa8b4d79bee81aea8a0"
+            },
+            {
+              "asset": "qwen2_audio_7b--model-00004-of-00005.safetensors.part002",
+              "size": 421910224,
+              "sha256": "2cb4acbbeeab58fb07f4b78e2060a8047b9cca312937c8b528675748da4593b9"
+            }
+          ]
+        },
+        {
+          "path": "model-00005-of-00005.safetensors",
+          "size": 1278214288,
+          "sha256": "a447dab3e72f9debd37a0c4ae0b9179a1bad2b06357092a77c066a0405bbc7d2",
+          "parts": [
+            {
+              "asset": "qwen2_audio_7b--model-00005-of-00005.safetensors.part000",
+              "size": 1278214288,
+              "sha256": "a447dab3e72f9debd37a0c4ae0b9179a1bad2b06357092a77c066a0405bbc7d2"
+            }
+          ]
+        }
+      ],
+      "metadata_files": [
+        "qwen2_audio_7b/README.md",
+        "qwen2_audio_7b/config.json",
+        "qwen2_audio_7b/generation_config.json",
+        "qwen2_audio_7b/merges.txt",
+        "qwen2_audio_7b/model.safetensors.index.json",
+        "qwen2_audio_7b/preprocessor_config.json",
+        "qwen2_audio_7b/tokenizer.json",
+        "qwen2_audio_7b/tokenizer_config.json",
+        "qwen2_audio_7b/vocab.json"
+      ],
+      "source_revision": "0a095220c30b7b31434169c3086508ef3ea5bf0a"
+    },
+    "gemma4_e4b": {
+      "name": "Gemma 4 E4B",
+      "source": "https://huggingface.co/google/gemma-4-E4B-it",
+      "files": [
+        {
+          "path": "model.safetensors",
+          "size": 15992595884,
+          "sha256": "cfbd3d2f1cd71bd471c37fe2bf8546d5028d41e5736f64e1ca6c6b8893125503",
+          "parts": [
+            {
+              "asset": "gemma4_e4b--model.safetensors.part000",
+              "size": 1610612736,
+              "sha256": "c4e1b32c8f9c026b3dc6c96463ee70e7278391b7c7201df3b68c77a16e8dbf0e"
+            },
+            {
+              "asset": "gemma4_e4b--model.safetensors.part001",
+              "size": 1610612736,
+              "sha256": "d99610f370bc80710efa00d663276d5e297a153f839462240c533a6c699d03e6"
+            },
+            {
+              "asset": "gemma4_e4b--model.safetensors.part002",
+              "size": 1610612736,
+              "sha256": "b8667d667212bb24852f71786cf25639b41f026c164ca57887ca04996419b239"
+            },
+            {
+              "asset": "gemma4_e4b--model.safetensors.part003",
+              "size": 1610612736,
+              "sha256": "196aea8c5c1a1fe234c175db94f07845660ae16e141afa336083a79479a0d910"
+            },
+            {
+              "asset": "gemma4_e4b--model.safetensors.part004",
+              "size": 1610612736,
+              "sha256": "34c382f2b3ad19b9c46354b3b1866926da81f4fbc466c80bf99f621eff14c517"
+            },
+            {
+              "asset": "gemma4_e4b--model.safetensors.part005",
+              "size": 1610612736,
+              "sha256": "56556b715dea7238e315794d0ee201d28ec1654ee932eb9008fdc373c995e928"
+            },
+            {
+              "asset": "gemma4_e4b--model.safetensors.part006",
+              "size": 1610612736,
+              "sha256": "9037fb7a246e3ca788c047dedbae2886871079bba80f9aa4288fa695065001bb"
+            },
+            {
+              "asset": "gemma4_e4b--model.safetensors.part007",
+              "size": 1610612736,
+              "sha256": "18f9b89e5e867c15a94418b7617ded776e42894d354c22a27e23f413bf4800ed"
+            },
+            {
+              "asset": "gemma4_e4b--model.safetensors.part008",
+              "size": 1610612736,
+              "sha256": "8bd4a0d66c2ded4ccd14d9f4b4f859440e7e5caa93a6f98e7868a400f3e20889"
+            },
+            {
+              "asset": "gemma4_e4b--model.safetensors.part009",
+              "size": 1497081260,
+              "sha256": "d55759d8b60e3a5f8463f31736618bba9d1de426d4c17b5d5589b5edb057ab3e"
+            }
+          ]
+        }
+      ],
+      "metadata_files": [
+        "gemma4_e4b/README.md",
+        "gemma4_e4b/chat_template.jinja",
+        "gemma4_e4b/config.json",
+        "gemma4_e4b/generation_config.json",
+        "gemma4_e4b/processor_config.json",
+        "gemma4_e4b/tokenizer.json",
+        "gemma4_e4b/tokenizer_config.json"
+      ],
+      "source_revision": "4ecc2ba63bcac23ba4a767fc87025b1450f84c9c"
+    }
+  }
+}

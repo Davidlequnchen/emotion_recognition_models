@@ -1,0 +1,10 @@
+{
+  "detailed_class_num": 17,
+  "finetune_method": "lora",
+  "freeze_params": true,
+  "hidden_dim": 256,
+  "lora_rank": 16,
+  "output_class_num": 9,
+  "pretrain_model": "whisper_large",
+  "use_conv_output": true
+}

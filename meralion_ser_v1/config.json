@@ -1,0 +1,37 @@
+{
+  "architectures": [
+    "SERWhisperECAPA"
+  ],
+  "auto_map": {
+    "AutoConfig": "configuration_ser_whisper_ecapa.SERConfig",
+    "AutoModel": "modeling_ser_whisper_ecapa.SERWhisperECAPA",
+    "AutoModelForAudioClassification": "modeling_ser_whisper_ecapa.SERWhisperECAPAForAudioClassification"
+  },
+  "finetune_strategy": "merged",
+  "id2label": {
+    "0": "neutral",
+    "1": "happy",
+    "2": "sad",
+    "3": "angry",
+    "4": "fearful",
+    "5": "disgusted",
+    "6": "surprised"
+  },
+  "label2id": {
+    "angry": 3,
+    "disgusted": 5,
+    "fearful": 4,
+    "happy": 1,
+    "neutral": 0,
+    "sad": 2,
+    "surprised": 6
+  },
+  "model_type": "ser-whisper-ecapa",
+  "num_emotions": 7,
+  "pooling_type": "hybrid",
+  "sampling_rate": 16000,
+  "torch_dtype": "float32",
+  "transformers_version": "4.49.0",
+  "use_weighted_sum": false,
+  "whisper_name": "openai/whisper-medium"
+}

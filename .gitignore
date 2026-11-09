@@ -1,0 +1,21 @@
+# Model weights are Release assets, never Git or Git LFS objects.
+*.pt
+*.pth
+*.ckpt
+*.bin
+*.onnx
+*.safetensors
+*.part[0-9][0-9][0-9]
+*.sha256
+*.downloading
+*.partial
+.downloads/
+.cache/
+__pycache__/
+*.py[cod]
+.DS_Store
+._*
+.gitkeep
+# Ignore old nested Hugging Face attributes; only the root attributes are used.
+**/.gitattributes
+!/.gitattributes
